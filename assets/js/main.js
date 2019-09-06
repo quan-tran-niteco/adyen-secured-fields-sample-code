@@ -133,10 +133,12 @@ $(document).ready(function() {
         ///////////////////////////////////// INITIALIZE CHECKOUT CORE //////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////////////////////////////////
 
+        var dkm = document.getElementById("dkm").innerText;
         window.checkout = new AdyenCheckout({
             locale: 'en-US',
             originKey,
             loadingContext: 'https://checkoutshopper-test.adyen.com/checkoutshopper/',
+            paymentMethodsResponse:dkm,
             onChange: handleOnChange,
             onError: console.error
         });
